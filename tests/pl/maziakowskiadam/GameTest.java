@@ -146,4 +146,20 @@ public class GameTest {
         gameScore = tennisGame.getScore();
         assertEquals(gameScore, "Receiver won!");
     }
+
+    @Test
+    public void testForWinAfterAdvantage() {
+        receiver.scored();
+        receiver.scored();
+        receiver.scored();
+        server.scored();
+        server.scored();
+        server.scored();
+        receiver.scored();
+        receiver.scored();
+        String gameScore;
+        gameScore = tennisGame.getScore();
+        assertEquals(gameScore, "Receiver won!");
+
+    }
 }

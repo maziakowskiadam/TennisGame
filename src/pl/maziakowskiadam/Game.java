@@ -24,10 +24,15 @@ public class Game {
         } else if (receiver.getScore() == 4 && server.getScore() <= 2) {
             score = receiver.getName() + " won!";
             gameEnded = true;
+        } else if (receiver.getScore() == 5 && server.getScore() == 3) {
+            score = receiver.getName() + " won!";
+            gameEnded = true;
+        } else if (server.getScore() == 5 && receiver.getScore() == 3) {
+            score = server.getName() + " won!";
+            gameEnded = true;
         } else {
             score = server.scoreString() + " : " + receiver.scoreString();
         }
-
 
         return score;
     }
