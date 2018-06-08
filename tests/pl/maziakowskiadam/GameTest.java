@@ -13,8 +13,8 @@ public class GameTest {
 
     @Before
     public void setUp() throws Exception {
-        server = new Player("server");
-        receiver = new Player("receiver");
+        server = new Player("Server");
+        receiver = new Player("Receiver");
         tennisGame = new Game(server, receiver);
     }
 
@@ -107,15 +107,15 @@ public class GameTest {
     }
 
     @Test
-    public void testForDeuceAfterServerAdvantage() {
-        server.scored();
+    public void testForDeuceAfterAdvantage() {
+        receiver.scored();
+        receiver.scored();
+        receiver.scored();
         server.scored();
         server.scored();
         server.scored();
         receiver.scored();
-        receiver.scored();
-        receiver.scored();
-        receiver.scored();
+        server.scored();
         String gameScore;
         gameScore = tennisGame.getScore();
         assertEquals(gameScore, "40 : 40");

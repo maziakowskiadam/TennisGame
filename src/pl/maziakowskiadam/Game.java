@@ -4,7 +4,7 @@ public class Game {
 
     private Player server;
     private Player receiver;
-    boolean gameEnded;
+    private boolean gameEnded;
 
     public Game(Player server, Player receiver) {
         this.server = server;
@@ -19,10 +19,10 @@ public class Game {
             receiver.setScore(3);
             score = server.scoreString() + " : " + receiver.scoreString();
         } else if (server.getScore() == 4 && receiver.getScore() <= 2) {
-            score = "Server won!";
+            score = server.getName() + " won!";
             gameEnded = true;
         } else if (receiver.getScore() == 4 && server.getScore() <= 2) {
-            score = "Receiver won!";
+            score = receiver.getName() + " won!";
             gameEnded = true;
         } else {
             score = server.scoreString() + " : " + receiver.scoreString();
@@ -30,5 +30,29 @@ public class Game {
 
 
         return score;
+    }
+
+    public Player getServer() {
+        return server;
+    }
+
+    public void setServer(Player server) {
+        this.server = server;
+    }
+
+    public Player getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(Player receiver) {
+        this.receiver = receiver;
+    }
+
+    public boolean isGameEnded() {
+        return gameEnded;
+    }
+
+    public void setGameEnded(boolean gameEnded) {
+        this.gameEnded = gameEnded;
     }
 }
