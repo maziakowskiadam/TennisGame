@@ -20,7 +20,7 @@ public class Main {
             System.out.println("Please enter the player that wins the point:");
             scorer = keyboard.nextLine();
 
-            if ("1".equals(scorer)){
+            if ("1".equals(scorer)) {
                 server.scored();
             } else if ("2".equals(scorer)) {
                 receiver.scored();

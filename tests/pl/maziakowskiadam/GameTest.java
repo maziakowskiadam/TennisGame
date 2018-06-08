@@ -43,6 +43,7 @@ public class GameTest {
         gameScore = tennisGame.getScore();
         assertEquals(gameScore, "30 : 15");
     }
+
     @Test
     public void testForThirtyAll() {
         server.scored();
@@ -53,6 +54,7 @@ public class GameTest {
         gameScore = tennisGame.getScore();
         assertEquals(gameScore, "30 : 30");
     }
+
     @Test
     public void testForFortyThirty() {
         server.scored();

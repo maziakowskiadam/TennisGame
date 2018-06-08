@@ -21,11 +21,10 @@ public class PlayerTest {
         }
 
         assertEquals(player.getScore(), 3);
-
     }
 
     @Test
-    public void testForScoreString(){
+    public void testForScoreString() {
         player.scored();
         player.scored();
 
